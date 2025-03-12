@@ -40,6 +40,12 @@ money_quotes = [
 
 # specific funtion mien add on funtionality hone ka km decorator anjam dete hain
 
+@app.get("/")
+def read_root():
+    return {
+        "message": "Hello World, Go to /side_hustles or /money_quotes to get a random side hustle or money quote"
+    }
+
 @app.get("/side_hustles") #route handler
 def get_side_hustles():
     """Return a random side hustle idea"""
