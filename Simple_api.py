@@ -41,10 +41,9 @@ money_quotes = [
 # specific funtion mien add on funtionality hone ka km decorator anjam dete hain
 
 @app.get("/side_hustles") #route handler
-def get_side_hustles(apikey:str):
+def get_side_hustles():
     """Return a random side hustle idea"""
-    if apikey != "1234567890":
-       return {"error": "Invalid API key"}
+
     return {"side_hustles": random.choice(side_hustles)}
 
 @app.get("/money_quotes")
